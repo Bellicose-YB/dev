@@ -1,0 +1,276 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>login page</title>
+	<style type="text/css">
+		@charset "utf-8";
+		body{
+			padding: 0px;  
+			margin: 0px;	
+			font-family: calibari;
+			box-sizing: border-box; 
+		}
+		.main{
+			background-image: url("images/bg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width:100%;
+			height: 100vh;
+			position: relative;
+		}	
+		a{
+			text-decoration: none;
+		}
+		div{
+			position: absolute;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		h1{
+			padding: 0px;  
+			margin: 0px;
+			font-family: 'Montserrat', sans-serif;
+			color: #fff;
+			font-size: 3rem;
+			letter-spacing: 3px;
+			margin:10px;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+		}
+		div form{
+			background-color: #23243c;
+			box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+			border-radius: 5px;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		div form input{
+			margin:10px;
+			width:250px;
+			height: 25px;
+			background-color: #434459;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			color:#fff;
+			padding:5px 20px;
+		}
+		div form input::placeholder{
+			color:#727383;
+		}
+		div form button{
+			text-transform: uppercase;
+			width:110px;
+			height: 35px;
+			border-radius: 20px;
+			border: none;
+			outline: none;
+			margin:5px;
+			font-weight:600;
+			background-color:#3b70e0;
+			color:#fff;
+			font-size:12px;
+			font-family: 'Montserrat', sans-serif;
+			letter-spacing: 1px;
+		}
+		div form button:hover{
+			background-color:rgb(125, 49, 247);
+			transition: all ease 0.3s;
+		}
+		a{
+			color:#62627d;
+			margin:20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 0.9rem;
+			font-weight: bold;
+			font-family: poppins;
+		}
+	</style>
+</head>
+<body>
+	<section class="main">
+
+		<div>
+			<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+			<h1 class="login-heading">TIC TAC TOE</h1>
+			<form class="form">
+				<input type="email" name="Yatharth" placeholder="example@gmail.com">
+				<input type="password" name="Bhargava" placeholder="example">
+				<button>Log In</button>
+			</form>
+			<a href="#" title="forget" >Forget password?</a>
+		</div>
+	</section>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>LETS PLAY!</title>
+	<style>
+		*{
+			margin : 0 ;
+			padding : 0 ;
+			box-sizing: border-box; 
+		}
+		body{
+			background-image: url("images/play.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width:100%;
+			height: 100vh;
+		}
+		table{
+			width: 420px;
+  			height: 420px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 10px !important;
+		}
+		div{
+			padding-top: 100px;
+			width: 550px;
+  			height: 550px;
+  			background-color: #2B3244;
+  			position: absolute;
+  			border-color: ;
+  			border-radius: 10px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-40%);
+			box-shadow: 5px 2px 1px 1px rgba(0,0,0,0.3 );
+		}
+		table, th, td {
+  			border: 2px solid black;
+  			border-collapse: collapse;
+  			border-radius: 10px !important;
+  			border-color: white;
+		}
+		td {
+  			height: 140px;
+  			width: 140px;
+  			font-size: 100px; 
+  			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+  			color: white;
+		}
+		h2{
+			padding-top: 60px;
+			color: white;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 70px; 
+		}
+	</style>
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+	<h2 id="heading"><center>LET'S START !!</center></h2>
+	<div>
+		<table>
+			<tr class="r1">
+				<td id="c11" onclick="printx('11')"></td>
+				<td id="c12" onclick="printx('12')"></td>
+				<td id="c13" onclick="printx('13')"></td>
+			</tr>
+			<tr class="r2">
+				<td id="c21" onclick="printx('21')"></td>
+				<td id="c22" onclick="printx('22')"></td>
+				<td id="c23" onclick="printx('23')"></td>
+			</tr>
+			<tr class="r3">
+				<td id="c31" onclick="printx('31')"></td>
+				<td id="c32" onclick="printx('32')"></td>
+				<td id="c33" onclick="printx('33')"></td>
+			</tr>
+		</table>
+	</div>	
+	<script>
+		let sign=localStorage["key"];
+		console.log(localStorage["key"]);
+		/*if(window.localStorage.getItem('item')=""){
+			sign="X";
+		}else{
+			sign=window.localStorage.getItem('item');
+		}*/
+		let heading=document.getElementById("heading");
+		function printx(number){
+			let isko =document.getElementById("c"+number);
+			if(isko.innerText==""){
+				isko.innerHTML=sign;
+				if(checkwin(sign)){
+					heading.innerHTML="<center>"+sign+"'s WINS!!!!!"+"</center>";
+					timeFunction();
+				}
+				else if(all()){
+					heading.innerHTML="<center>"+"IT's A TIE!!!!!"+"</center>";
+					timeFunction();
+				}
+				else{
+					checksign();
+					heading.innerHTML="<center>"+sign+"'s TURN"+"</center>";
+				}
+			}
+		}
+
+		function timeFunction(){
+						setTimeout(function(){document.getElementById("c11").innerHTML="";document.getElementById("c12").innerHTML="";document.getElementById("c13").innerHTML="";
+			document.getElementById("c21").innerHTML="";document.getElementById("c22").innerHTML="";document.getElementById("c23").innerHTML="";
+			document.getElementById("c31").innerHTML="";document.getElementById("c32").innerHTML="";document.getElementById("c33").	innerHTML="";window.location.href="file:///C:/Users/Yatharth/Desktop/DEV/tic%20tac%20toe/index.html";},3000);
+
+					}	
+		function earseall(){
+			document.getElementById("c11").innerHTML="";document.getElementById("c12").innerHTML="";document.getElementById("c13").innerHTML="";
+			document.getElementById("c21").innerHTML="";document.getElementById("c22").innerHTML="";document.getElementById("c23").innerHTML="";
+			document.getElementById("c31").innerHTML="";document.getElementById("c32").innerHTML="";document.getElementById("c33").	innerHTML="";
+		}
+		function all(){
+			if(document.getElementById("c11").innerHTML!=""&&document.getElementById("c12").innerHTML!=""&&document.getElementById("c13").innerHTML!=""&&
+				document.getElementById("c21").innerHTML!=""&&document.getElementById("c22").innerHTML!=""&&document.getElementById("c23").innerHTML!=""&&
+				document.getElementById("c31").innerHTML!=""&&document.getElementById("c32").innerHTML!=""&&document.getElementById("c33").innerHTML!=""){
+				return true;
+			}
+			else
+				return false;
+		}
+		function checksign(){
+			if(sign=="X")sign="O";
+			else sign="X";
+		}
+		function check(x,y,z,sign){
+
+			let a =document.getElementById("c"+x).innerHTML;
+			let b =document.getElementById("c"+y).innerHTML;
+			let c =document.getElementById("c"+z).innerHTML;
+			// debugger;
+			if(a==sign&&b==sign&&c==sign){
+				return true ;
+			}			
+			else{
+				false;
+			}
+		}
+		function checkwin(sign) {	
+			if(check("11","12","13",sign)||check("21","22","23",sign)||check("31","32","33",sign)||check("11","22","33",sign)||
+				check("11","21","31",sign)||check("12","22","32",sign)||check("13","23","33",sign)||check("13","22","31",sign)){
+				return true;
+			}else return false;
+		}
+	</script>
+</body>
+</html>
+
+

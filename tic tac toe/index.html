@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tic Tac Toe</title>
+	<style type="text/css">
+		*{
+			margin : 0 ;
+			padding : 0 ;
+			box-sizing: border-box; 
+		}
+		body{
+		  margin: 0;
+		  padding: 0;
+		  background: #2d3436;
+		}
+		.back{
+			/* background-image: url("images/tic tac toe.jpg"); */
+			background-image: url("images/bg2.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width:100%;
+			height: 100vh;
+		}
+		.content{
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			transform: translate(-50%,-50%);
+		}
+		.TTT-heading{
+			margin: 50px;
+			font-size: 5rem;
+			letter-spacing: 3px;
+			font-family: 'Montserrat', sans-serif;
+			text-align: center;
+			/* font-family: 'Amatic SC', cursive; */
+			color: #fff;
+		}
+		.Selection div{
+			font-size: 1rem;
+			letter-spacing: 1px;
+			font-family: 'Montserrat', sans-serif;
+			text-align: center;
+			/* font-family: 'Amatic SC', cursive; */
+			color: #fff;
+		}
+		.btn{
+			padding-top: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+		}
+		.O{
+			padding-top: 10px;
+			padding-right : 70px;
+			padding-left : 70px;
+			/* position : absolute; */
+			font-size: 100px;
+			background-color: transparent;
+  			color: white;
+  			border: 0px;
+  			font-family: 'Amatic SC', cursive;
+			font-family: 'Kumbh Sans', sans-serif;
+  			/* border: 2px solid #4CAF50;  */
+		}
+		.O:hover {
+  			box-shadow: 5px -2px 1px 1px rgba(255,255,255,0.1 );/* , 17px 17px 17px 17px rgba(255,255,255,0.10		); */
+		}
+		.X{
+			padding-top: 10px;
+			padding-right: 70px;
+			/* position : absolute; */
+			padding-left: 70px;
+			font-size: 100px;
+			background-color: transparent;
+  			color: white;
+  			border: 0px;
+  			font-family: 'Amatic SC', cursive;
+			font-family: 'Kumbh Sans', sans-serif;
+  			/* border: 2px solid #4CAF50;  */
+		}
+		.X:hover {
+  			box-shadow: 5px -2px 1px 1px rgba(255,255,255,0.1 );/* , 17px 17px 17px 17px rgba(255,255,255,0.10		); */
+		}
+		
+		.Play{
+			padding-top: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+		}
+		.Play button{
+		  position: relative;
+		  display: block;
+		  background-color: transparent;
+		  color: white;
+		  font-size: 25px;
+		  font-family: "montserrat";
+		  text-decoration: none;
+		  /* margin: 30px 0; */
+		  border: 2px solid #ff7675;
+		  padding: 14px 60px;
+		  text-transform: uppercase;
+		  overflow: hidden;
+		  /* transition: 1s all ease; */
+		}
+		.Play button::before{
+		  background: #ff7675;
+		  content: "";
+		  position: absolute;
+		  /* top: 50%; */
+		  /* left: 50%; */
+		  /* transform: translate(-50%,-50%); */
+		  z-index: -1;
+		  transition: all 0.6s ease;
+		}
+
+		.Play button::before{
+		  width: 100%;
+		  height: 0%;
+		  transform: translate(-50%,-50%) rotate(45deg);
+		}
+		.Play button:hover::before{
+		  height: 380%;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet"> 
+	<section class="back">
+		<div class="content">
+			<h1 class="TTT-heading">TIC TAC TOE</h1>	
+			<div class="Selection">
+				<div>Choose Noughts(O) or Crosses(X)???</div>
+				<div class="btn">
+					<button class="O" id="o" onclick="set("O")">O</button>
+					<button class="X" id="x" onclick="set("X")">X</button>
+				</div>
+			</div>
+			<div class="Play">
+				<a href="file:///C:/Users/Yatharth/Desktop/DEV/NIKE%20layout/index.html"><button>PLAY </button></a>;
+			</div>
+		</div>
+	</section>
+	<script>
+		function set(start){
+			window.localStorage.setItem('item',start);
+		}
+	</script>
+</body>
+</html>
